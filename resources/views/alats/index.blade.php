@@ -4,8 +4,12 @@
 
 @section('content')
     <h1>Data Alat Pendakian</h1>
+    @if (session('success'))
+        <p>{{ session('success') }}</p>
+    @endif
 
     <p>Daftar perlengkapan pendakian yang tersedia di PendakiRent.</p>
+    <a href="{{ route('alats.create') }}">Tambah Data</a>
 
     <table border="1" cellpadding="10" cellspacing="0">
         <thead>
