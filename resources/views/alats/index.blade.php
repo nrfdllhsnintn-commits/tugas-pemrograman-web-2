@@ -36,9 +36,19 @@
                     <td>{{ $alat->stok }}</td>
                     <td>Rp {{ number_format($alat->harga_sewa, 0, ',', '.') }}</td>
                     <td>{{ $alat->kondisi }}</td>
+
                     <td>
                         <a href="{{ route('alats.edit', $alat->id) }}">Edit</a>
+
+                        <form action="{{ route('alats.destroy', $alat->id) }}" method="POST"
+                            onsubmit="return confirm('Yakin ingin menghapus data ini?')">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit">Delete</button>
+                        </form>
                     </td>
+
                 </tr>
             @empty
                 <tr>

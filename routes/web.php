@@ -13,3 +13,4 @@ Route::get('/alats/create', [AlatController::class, 'create'])->name('alats.crea
 Route::post('/alats', [AlatController::class, 'store'])->name('alats.store');
 Route::get('/alats/{id}/edit', [AlatController::class, 'edit'])->name('alats.edit');
 Route::put('/alats/{id}', [AlatController::class, 'update'])->name('alats.update');
+Route::delete('/alats/{id}', [AlatController::class, 'destroy'])->name('alats.destroy');
