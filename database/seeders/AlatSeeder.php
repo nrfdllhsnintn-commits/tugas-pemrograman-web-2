@@ -8,6 +8,6 @@ class AlatSeeder extends Seeder
 {
     public function run(): void
     {
-        Alat::factory(10)->create();
+        Alat::factory(39)->create();
     }
 }
